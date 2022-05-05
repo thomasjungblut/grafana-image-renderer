@@ -4,7 +4,6 @@ on: workflow_dispatch
 
 jobs:
   main:
-    runs-on: self-hosted
     steps:
       -
         name: Checkout
@@ -28,7 +27,7 @@ jobs:
         with:
           platforms: linux/arm/v7
           push: true
-          tags: hferreira/grafana-image-renderer:armv7
+          tags:  quay.io/thomasjungblut/grafana-image-renderer
           file: ./Dockerfile_armv7
       -
         name: Image digest
